@@ -1,0 +1,519 @@
+﻿@{
+    string currentController = ViewContext.RouteData.Values["controller"].ToString();
+    string currentAction = ViewContext.RouteData.Values["action"].ToString();
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobiFone tỉnh An Giang</title>
+    <link rel='dns-prefetch' href='http://cdn.jsdelivr.net/' />
+    <link rel='prefetch' href='~/Client/themes/flatsome/assets/js/chunk.countup3708.js' />
+    <link rel='prefetch' href='~/Client/themes/flatsome/assets/js/chunk.sticky-sidebar3708.js' />
+    <link rel='prefetch' href='~/Client/themes/flatsome/assets/js/chunk.tooltips3708.js' />
+    <link rel='prefetch' href='~/Client/themes/flatsome/assets/js/chunk.vendors-popups3708.js' />
+    <link rel='prefetch' href='~/Client/themes/flatsome/assets/js/chunk.vendors-slider3708.js' />
+
+
+    <link rel='stylesheet' href='~/Client/plugins/contact-form-7/includes/css/stylescfaa.css' type='text/css' />
+    <link rel='stylesheet' href='~/Client/plugins/button-contact-vr/css/style84fc.css' type='text/css' />
+    <link rel='stylesheet' href='~/Client/plugins/simple-social-icons/css/style5b75.css' type='text/css' />
+    <link rel='stylesheet' href='~/Client/themes/flatsome/assets/css/flatsome3708.css' type='text/css' />
+
+    <link rel='stylesheet' href='~/Client/themes/flatsome/style3708.css' type='text/css' />
+
+    <script type="text/javascript" src="~/Client/js/jquery/jquery.minf43b.js" id="jquery-core-js"></script>
+    <script type="text/javascript" src="~/Client/js/jquery/jquery-migrate.min5589.js" id="jquery-migrate-js"></script>
+
+    <link rel="icon" href="~/Client/uploads/2023/05/cropped-i_mobifone-1-32x32.png" sizes="32x32" />
+    <link rel="icon" href="~/Client/uploads/2023/05/cropped-i_mobifone-1-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="~/Client/uploads/2023/05/cropped-i_mobifone-1-180x180.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/Client/styles.css">
+</head>
+
+<body ng-app="Mobifone" class="home page-template page-template-page-blank page-template-page-blank-php page page-id-33 full-width lightbox
+nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border">
+
+    <div id="wrapper">
+   
+        <header id="header" class="header has-sticky sticky-jump"
+                style="height: 101px; display: flex; justify-content: center; align-items: center;">
+            <div class="header-wrapper">
+                <div id="masthead" style="height: 100%;" class="header-main ">
+                    <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+                        <div id="logo" class="flex-col logo">
+                            <a href="index.html" style="max-width: 173px;" title="MobiFone tỉnh An Giang" rel="home">
+                                <img width="100%" src="~/Client/uploads/2023/05/logo2.png" class="header_logo header-logo"
+                                     alt="MobiFone tỉnh An Giang" />
+                                <img width="100%" src="~/Client/uploads/2023/05/4gxdoi222-02-1024x597.jpg"
+                                     class="header-logo-dark" alt="MobiFone tỉnh An Giang" />
+                            </a>
+                            <p class="logo-tagline"></p>
+                        </div>
+
+                        <!-- Mobile Left Elements -->
+                        <div class="flex-col show-for-medium flex-left">
+                            <ul class="mobile-nav nav nav-left ">
+                                <li class="nav-icon has-icon">
+                                    <div class="header-button">
+                                        <a href="#" data-open="#main-menu" data-pos="left"
+                                           data-bg="main-menu-overlay" data-color=""
+                                           class="icon primary button circle is-small" aria-label="Menu"
+                                           aria-controls="main-menu" aria-expanded="false">
+
+                                            <i class="fa-solid fa-bars"></i>
+                                            <span class="menu-title uppercase hide-for-small">Menu</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Left Elements -->
+                        <div class="flex-col hide-for-medium flex-left flex-grow">
+                            <ul class="header-nav header-nav-main nav nav-left  nav-line-bottom nav-uppercase nav-prompts-overlay">
+                                <li id="menu-item-328"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home @if (currentController == "Home") { <text>active</text> }">
+
+                                    <a href="@Url.Action("Index", "Home")" aria-current="page" class="nav-top-link">Trang chủ</a>
+                                </li>
+
+                                <li id="menu-item-367"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367 menu-item-design-default @if (currentController == "GoiCuoc")
+                                {
+                                    <text>active</text>
+                                }">
+                                    <a href="@Url.Action("GoiCuoc", "GoiCuoc")" class="nav-top-link">Gói cước/Dịch Vụ</a>
+                                </li>
+                                <li id="menu-item-500"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-500 menu-item-design-default  @if (currentController == "SimSo")
+                                    {
+                                    <text>active</text>
+                                }">
+                                    <a href="@Url.Action("SimSo", "SimSo")" class="nav-top-link">Sim số</a>
+                                </li>
+                                <li id="menu-item-361"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361 menu-item-design-default @if (currentController == "TinTuc")
+                                    {
+                                    <text>active</text>
+                                }">
+                                    <a href="@Url.Action("TinTuc", "TinTuc")" class="nav-top-link">Tin Tức</a>
+                                </li>
+                                <li id="menu-item-334"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334 menu-item-design-default @if (currentController == "TuyenDung")
+                                    {
+                                    <text>active</text>
+                                }">
+                                    <a href="@Url.Action("TuyenDung", "TuyenDung")" class="nav-top-link">Tuyển dụng</a>
+                                </li>
+                                <li id="menu-item-329"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329 menu-item-design-default @if (currentController == "GioiThieu")
+                                    {
+                                    <text>active</text>
+                                }">
+                                    <a href="@Url.Action("GioiThieu", "GioiThieu")" class="nav-top-link">Giới thiệu</a>
+                                </li>
+                                <li id="menu-item-331"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 menu-item-design-default @if (currentController == " LienHe")
+                                    {
+                                    <text>active</text>
+                                }">
+                                    <a href="@Url.Action("LienHe", "LienHe")" class="nav-top-link">Liên Hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Right Elements -->
+                        <div class="flex-col hide-for-medium flex-right">
+                            <ul class="header-nav header-nav-main nav nav-right  nav-line-bottom nav-uppercase nav-prompts-overlay">
+                                <li class="header-search header-search-lightbox has-icon">
+                                    <div class="header-button">
+                                        <a href="#search-lightbox" aria-label="Search" data-open="#search-lightbox"
+                                           data-focus="input.search-field" class="icon primary button circle is-small">
+                                            <i class="fa-solid fa-magnifying-glass" style="font-size:16px;"></i>
+                                        </a>
+                                    </div>
+
+                                    <div id="search-lightbox" class="mfp-hide dark text-center">
+                                        <div class="searchform-wrapper ux-search-box relative form-flat is-large">
+                                            <form method="get" class="searchform" action="https://mobifoneangiang.com/"
+                                                  role="search">
+                                                <div class="flex-row relative">
+                                                    <div class="flex-col flex-grow">
+                                                        <input type="search" class="search-field mb-0" name="s" value=""
+                                                               id="s" placeholder="Search&hellip;" />
+                                                    </div>
+                                                    <div class="flex-col">
+                                                        <button type="submit"
+                                                                class="ux-search-submit submit-button secondary button icon mb-0"
+                                                                aria-label="Submit">
+                                                            <i class="icon-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="live-search-results text-left z-top"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header-search header-search-lightbox has-icon">
+                                    <div class="header-button">
+                                        <a href="/Login"  class="icon primary button circle is-small">
+                                            <i class="fa-solid fa-user" style="font-size:16px;"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Mobile Right Elements -->
+                        <div class="flex-col show-for-medium flex-right">
+                            <ul class="mobile-nav nav nav-right ">
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="header-bg-container fill">
+                    <div class="header-bg-image fill"></div>
+                    <div class="header-bg-color fill"></div>
+                </div>
+            </div>
+        </header>
+
+
+        <main id="main" class="">
+
+           @RenderBody()
+
+        </main>
+
+        <footer id="footer" class="footer-wrapper">
+
+
+            <!-- FOOTER 1 -->
+            <!-- FOOTER 2 -->
+            <div class="footer-widgets footer footer-2 dark">
+                <div class="row dark large-columns-3 mb-0">
+                    <div id="text-5" class="col pb-0 widget widget_text">
+                        <span class="widget-title">Liên hệ</span>
+                        <div class="is-divider small"></div>
+                        <div class="textwidget">
+                            <ul>
+                                <li><strong>Hotline:</strong> 077 924 9999</li>
+                                <li><strong>Email:</strong>mobifoneaglx@gmail.com</li>
+                                <li><strong>Địa chỉ:</strong> 93, Trần Hưng Đạo, Mỹ Quý Long Xuyên, An Giang</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="simple-social-icons-4" class="col pb-0 widget simple-social-icons">
+                        <span class="widget-title">Kết nối mobifone</span>
+                        <div class="is-divider small"></div>
+                        <ul class="alignleft">
+                            <li class="ssi-dribbble">
+                                <a href="index.html" target="_blank" rel="noopener noreferrer">
+                                    <svg role="img" class="social-dribbble" aria-labelledby="social-dribbble-4">
+                                        <title id="social-dribbble-4">Dribbble</title>
+                                        <use xlink:href="~/Client/plugins/simple-social-icons/symbol-defs.svg#social-dribbble">
+                                        </use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="ssi-email">
+                                <a href="mailto:m&#111;b&#105;&#102;o&#110;&#101;&#097;&#103;l&#120;&#064;g&#109;&#097;il.&#099;om">
+                                    <svg role="img" class="social-email" aria-labelledby="social-email-4">
+                                        <title id="social-email-4">Email</title>
+                                        <use xlink:href="~/Client/plugins/simple-social-icons/symbol-defs.svg#social-email">
+                                        </use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="ssi-facebook">
+                                <a href="https://www.facebook.com/mobifonetinhangiang/"
+                                   target="_blank" rel="noopener noreferrer">
+                                    <svg role="img" class="social-facebook"
+                                         aria-labelledby="social-facebook-4">
+                                        <title id="social-facebook-4">Facebook</title>
+                                        <use xlink:href="~/Client/plugins/simple-social-icons/symbol-defs.svg#social-facebook">
+                                        </use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="ssi-phone">
+                                <a href="tel: 0&#055;&#055;&#032;9&#050;&#052; 99&#057;9"
+                                   target="_blank" rel="noopener noreferrer">
+                                    <svg role="img" class="social-phone"
+                                         aria-labelledby="social-phone-4">
+                                        <title id="social-phone-4">Phone</title>
+                                        <use xlink:href="~/Client/plugins/simple-social-icons/symbol-defs.svg#social-phone">
+                                        </use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="custom_html-6" class="widget_text col pb-0 widget widget_custom_html">
+                        <span class="widget-title">Ứng dụng mobifone</span>
+                        <div class="is-divider small"></div>
+                        <div class="textwidget custom-html-widget">
+                            <script src='../kit.fontawesome.com/a076d05399.html' crossorigin='anonymous'></script>
+                            <link rel="stylesheet"
+                                  href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                            <a href="https://apps.apple.com/vn/app/my-mobifone/id719320091">
+                                <i class="fa-brands fa-apple" style="font-size:36px"></i>
+                            </a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://play.google.com/store/apps/details?id=vms.com.vn.mymobifone">
+                                <i style="font-size:36px" class="fa-brands fa-android"></i>
+                            </a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="absolute-footer dark medium-text-center text-center">
+                <div class="container clearfix">
+
+
+                    <div class="footer-primary pull-left">
+                        <div class="copyright-footer">
+                            Copyright 2024 © <strong>Trần Phi</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#top"
+               class="back-to-top button icon invert plain fixed bottom z-1 is-outline left hide-for-medium circle"
+               id="top-link" aria-label="Go to top"><i class="icon-angle-up"></i></a>
+
+        </footer>
+
+    </div>
+
+    <div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+
+
+        <div class="sidebar-menu no-scrollbar ">
+
+
+            <ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
+                <li class="header-search-form search-form html relative has-icon">
+                    <div class="header-search-form-wrapper">
+                        <div class="searchform-wrapper ux-search-box relative form-flat is-normal">
+                            <form method="get" class="searchform" action="https://mobifoneangiang.com/" role="search">
+                                <div class="flex-row relative">
+                                    <div class="flex-col flex-grow">
+                                        <input type="search" class="search-field mb-0" name="s" value="" id="s"
+                                               placeholder="Search&hellip;" />
+                                    </div>
+                                    <div class="flex-col">
+                                        <button type="submit"
+                                                class="ux-search-submit submit-button secondary button icon mb-0"
+                                                aria-label="Submit">
+                                            <i class="icon-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="live-search-results text-left z-top"></div>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-33 current_page_item menu-item-328">
+                    <a href="index.html" aria-current="page">Trang chủ</a>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367">
+                    <a href="goi-cuoc-hot/index.html">Gói cước/Dịch Vụ</a>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-500">
+                    <a href="sim-so/index.html">Sim số</a>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361">
+                    <a href="tin-tuc/index.html">Tin Tức</a>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334">
+                    <a href="tuyen-dung/index.html">Tuyển dụng</a>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329">
+                    <a href="gioi-thieu-2/index.html">Giới thiệu</a>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331">
+                    <a href="lien-he/index.html">Liên Hệ</a>
+                </li>
+            </ul>
+
+
+        </div>
+
+
+    </div>
+    <!-- if gom all in one show -->
+    <div id="button-contact-vr" class="active">
+        <div id="gom-all-in-one">
+            <!-- v3 -->
+            <!-- map -->
+            <div id="map-vr" class="button-contact">
+                <div class="phone-vr">
+                    <div class="phone-vr-circle-fill"></div>
+                    <div class="phone-vr-img-circle">
+                        <a target="_blank" href="https://goo.gl/maps/Mj2fLQzhBSXnB5N38">
+                            <img src="~/Client/plugins/button-contact-vr/img/showroom4.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- end map -->
+            <!-- fanpage -->
+            <div id="fanpage-vr" class="button-contact">
+                <div class="phone-vr">
+                    <div class="phone-vr-circle-fill"></div>
+                    <div class="phone-vr-img-circle">
+                        <a target="_blank" href="https://www.facebook.com/mobifonetinhangiang">
+                            <img src="~/Client/plugins/button-contact-vr/img/Facebook.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- end fanpage -->
+            <!-- zalo -->
+            <div id="zalo-vr" class="button-contact">
+                <div class="phone-vr">
+                    <div class="phone-vr-circle-fill"></div>
+                    <div class="phone-vr-img-circle">
+                        <a target="_blank" href="https://zalo.me/0779249999">
+                            <img src="~/Client/plugins/button-contact-vr/img/zalo.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- end zalo -->
+            <!-- Phone -->
+            <div id="phone-vr" class="button-contact">
+                <div class="phone-vr">
+                    <div class="phone-vr-circle-fill"></div>
+                    <div class="phone-vr-img-circle">
+                        <a href="tel:0779249999">
+                            <img src="~/Client/plugins/button-contact-vr/img/phone.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- end phone -->
+
+        </div><!-- end v3 class gom-all-in-one -->
+
+        <div id="all-in-one-vr" class="button-contact">
+            <div class="phone-vr">
+                <div class="phone-vr-circle-fill"></div>
+                <div class="phone-vr-img-circle">
+                    <img src="~/Client/plugins/button-contact-vr/img/icon1.png" />
+                </div>
+            </div>
+            <div class="phone-bar" style="background-color: transparent;">
+                <span class="text-phone"></span>
+            </div>
+        </div>
+
+    </div>
+    <!-- popup form -->
+    <div id="popup-form-contact-vr">
+        <div class="bg-popup-vr"></div>
+        <div class="content-popup-vr" id="loco-">
+
+            <div class="content-popup-div-vr">
+            </div>
+
+
+            <div class="close-popup-vr">x</div>
+        </div>
+    </div>
+
+    <!-- Add custom css and js -->
+    <!-- end Add custom css and js -->
+    <!-- popup showroom -->
+    <div id="popup-showroom-vr">
+        <div class="bg-popup-vr"></div>
+        <div class="content-popup-vr" id="loco-">
+
+            <div class="content-popup-div-vr">
+            </div>
+            <div class="close-popup-vr">x</div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $('#all-in-one-vr').click(function () {
+                $('#button-contact-vr').toggleClass('active');
+            })
+            $('#contact-form-vr').click(function () {
+                $('#popup-form-contact-vr').addClass('active');
+            })
+            $('div#popup-form-contact-vr .bg-popup-vr,div#popup-form-contact-vr .content-popup-vr .close-popup-vr').click(function () {
+                $('#popup-form-contact-vr').removeClass('active');
+            })
+            $('#contact-showroom').click(function () {
+                $('#popup-showroom-vr').addClass('active');
+            })
+            $('div#popup-showroom-vr .bg-popup-vr,.content-popup-vr .close-popup-vr').click(function () {
+                $('#popup-showroom-vr').removeClass('active');
+            })
+        });
+    </script>
+    <!-- end popup form -->
+    <!-- Facebook Messenger -->
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="162249070307870" theme_color="#0084ff"
+         logged_in_greeting="Xin chào! Chúng tôi có thể giúp gì cho bạn?"
+         logged_out_greeting="Xin chào! Chúng tôi có thể giúp gì cho bạn?">
+    </div>
+
+
+
+
+    <div class="ux-body-overlay"></div>
+
+    <script type="text/javascript" src="~/Client/plugins/contact-form-7/includes/swv/js/indexcfaa.js?ver=5.7.6"
+            id="swv-js"></script>
+    <script type="text/javascript" id="contact-form-7-js-extra">
+        /* <![CDATA[ */
+        var wpcf7 = { "api": { "root": "https:\/\/mobifoneangiang.com\/wp-json\/", "namespace": "contact-form-7\/v1" } };
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="~/Client/plugins/contact-form-7/includes/js/indexcfaa.js?ver=5.7.6"
+            id="contact-form-7-js"></script>
+    <script type="text/javascript"
+            src="~/Client/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search3708.js"
+            id="flatsome-live-search-js"></script>
+    <script type="text/javascript" src="~/Client/js/dist/vendor/wp-polyfill-inert.min0226.js?ver=3.1.2"
+            id="wp-polyfill-inert-js"></script>
+    <script type="text/javascript" src="~/Client/js/dist/vendor/regenerator-runtime.min6c85.js?ver=0.14.0"
+            id="regenerator-runtime-js"></script>
+    <script type="text/javascript" src="~/Client/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0"
+            id="wp-polyfill-js"></script>
+    <script type="text/javascript" src="~/Client/js/hoverIntent.min3e5a.js?ver=1.10.2" id="hoverIntent-js"></script>
+    <script type="text/javascript" src="~/Client/themes/flatsome/assets/libs/packery.pkgd.min3708.js"
+            id="flatsome-masonry-js-js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-sanitize.js"></script>
+    <script src="~/AngularJS/App.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "GoiCuoc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="GoiCuocCtrl" id="content" class="content-area page-wrapper" role="main">
+    <div class="row row-main">
+        <div class="large-12 col">
+            <div class="col-inner">
+                <div class="container section-title-container">
+                    <h3 class="section-title section-title-center">
+                        <b></b><span class="section-title-main"
+                                     style="color: rgb(0, 0, 255)">GÓI CƯỚC</span><b></b>
+                    </h3>
+                </div>
+
+                <div id="text-2123963163" class="text">
+                    <p style="text-align: center">
+                        <strong style="color: rgb(255, 0, 0);">
+                            Gói cước giá rẻ, dung lượng khủng, được yêu thích
+                            nhất hiện nay !
+                        </strong>
+                    </p>
+                </div>
+
+                <div class="row row-box-shadow-3 row-box-shadow-5-hover" id="row-1687497344">
+                    <div id="col-9923402" class="col medium-4 small-12 large-4" ng-repeat="item in searchResults">
+                        <div class="col-inner">
+                            <div id="page-header-1272295620" class="page-header-wrapper">
+                                <div class="page-title 24G dark featured-title">
+                                    <div class="page-title-inner container align-center text-center flex-row-col medium-flex-wrap">
+                                        <div class="title-wrapper is-large flex-col">
+                                            <h1 class="entry-title mb-0">{{item.maGoi}}</h1>
+                                        </div>
+                                        <div class="title-content flex-col"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pricing-table-wrapper">
+                                <div class="pricing-table ux_price_table text-center box-shadow-3-hover">
+                                    <div class="pricing-table-header">
+                                        <div class="title uppercase strong">{{item.thongTinChinh}}</div>
+                                        <div class="price is-xxlarge">{{item.data}}</div>
+                                    </div>
+                                    <div class="pricing-table-items items">
+                                        <div class="bullet-item" title="" ng-repeat="detail in item.listThongTin">
+                                            <span class="text">
+                                                {{detail.moTa}}
+                                            </span>
+                                        </div>
+
+                                        <a class="button alert is-gloss expand" style="border-radius: 99px">
+                                            <i class="fa-solid fa-bag-shopping"></i>
+                                            <span>{{item.giaGoiCuoc.toLocaleString(vi-vn)}} VNĐ</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                 
+                </div>
+                <div class="pagination">
+                    <a href="#" ng-click="currentPage = 1">&laquo;</a>
+                    <a href="#" ng-repeat="page in getPages()" ng-class="{ 'active': currentPage === page }" ng-click="setCurrentPage(page)">
+                        {{ page }}
+                    </a> <a href="#" ng-click="currentPage = totalPages">&raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/AngularJS/Client/GoiCuoc.js"></script>
+}
+

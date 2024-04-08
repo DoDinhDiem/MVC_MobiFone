@@ -1,0 +1,204 @@
+﻿
+@{
+    ViewData["Title"] = "Quản lý gói cước";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div ng-controller="GoiCuocCtrl">
+    <div class="position-fixed top-1 end-0 m-3" style="width: 30%; z-index: 999" ng-show="showSuccessAlert">
+        <div class="alert alert-success alert-dismissible bg-success text-white border-0 fade show" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ng-click="closeSuccessAlert()"></button>
+            <strong>Thành công - </strong> {{ successMessage }}
+        </div>
+    </div>
+
+    <!-- Thông báo lỗi -->
+    <div class="position-fixed top-1 end-0 m-3" style="width: 30%; z-index: 999" ng-show="showErrorAlert">
+        <div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ng-click="closeErrorAlert()"></button>
+            <strong>Lỗi - </strong> {{ errorMessage }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                   
+                </div>
+                <h4 class="page-title">@ViewBag.Title</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row mb-2">
+                        <div class="col-sm-4">
+                            <a href="javascript:void(0);" class="btn btn-danger mb-2" ng-click="TaoMoi()" data-bs-toggle="modal" data-bs-target="#standard-modal"><i class="mdi mdi-plus-circle me-2"></i> Thêm mới</a>
+                        </div>
+                        <div class="col-sm-8">
+                        </div><!-- end col-->
+                    </div>
+
+                    <div class="table-responsive">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 d-flex align-items-center">
+                                <div class="dataTables_length" style="display: flex, flex-direction: row;" id="products-datatable_length">
+                                    <label class="form-label">
+                                        Hiển thị
+                                        <select class="form-select form-select-sm ms-1 me-1" ng-model="pageSize" ng-change="search()">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30">30</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 d-flex justify-content-end">
+                                <div id="products-datatable_filter" class="dataTables_filter">
+                                    <label>
+                                        Tìm kiếm:
+                                        <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="products-datatable" ng-model="searchTitle" ng-change="search()">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table class="table table-centered w-100 dt-responsive nowrap" id="products-datatable">
+                            <thead class="table-light">
+                                <tr>
+                                    <th class="text-center">Mã gói</th>
+                                    <th class="text-center">Thông tin chính</th>
+                                    <th class="text-center">Dữ liệu</th>
+                                    <th class="text-center">Giá gói cước</th>
+                                    <th style="width: 85px;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in List">
+                                    <td class="text-center">
+                                        {{item.maGoi}}
+                                    </td>
+                                    <td class="text-center">
+                                        {{item.thongTinChinh}}
+                                    </td>
+                                    <td class="text-center">
+                                        {{item.data}}
+                                    </td>
+                                    <td class="text-center">
+                                        {{item.giaGoiCuoc.toLocaleString(vi-vn)}} VNĐ
+                                    </td>
+
+                                    <td class="table-action">
+                                        <a href="javascript:void(0);" ng-click="getById(item.id)" class="action-icon" data-bs-toggle="modal" data-bs-target="#standard-modal"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                        <a href="javascript:void(0);" ng-click="deleteById(item.id)" " class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                        <div class="row">
+                            <div class="col-sm-12 col-md-5">
+                                <div class="dataTables_info" id="products-datatable_info" GoiCuoc="status" aria-live="polite">
+                                    Hiển thị sản phẩm {{ (currentPage - 1) * pageSize + 1 }} đến {{ (currentPage - 1) * pageSize + List.length }} của {{ totalItems }}
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-7 d-flex justify-content-end">
+                                <div class="dataTables_paginate paging_simple_numbers" id="products-datatable_paginate">
+                                    <ul class="pagination pagination-rounded">
+                                        <li class="paginate_button page-item" ng-if="totalPages > 1 && currentPage > 1">
+                                            <a href="javascript:void(0);" aria-controls="products-datatable" ng-click="setPage(currentPage - 1)" tabindex="0" class="page-link">
+                                                <i class="mdi mdi-chevron-left"></i>
+                                            </a>
+                                        </li>
+                                        <li class="paginate_button page-item" ng-repeat="page in pagesArray">
+                                            <a href="javascript:void(0);" aria-controls="products-datatable" ng-click="setPage(page)" tabindex="0" class="page-link" ng-class="{ 'active': currentPage === page }">{{ page }}</a>
+                                        </li>
+                                        <li class="paginate_button page-item" ng-if="totalPages > 1 && currentPage < totalPages">
+                                            <a href="javascript:void(0);" aria-controls="products-datatable" ng-click="setPage(currentPage + 1)" tabindex="0" class="page-link">
+                                                <i class="mdi mdi-chevron-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end card-body-->
+            </div> <!-- end card-->
+        </div> <!-- end col -->
+    </div>
+
+    <div id="standard-modal" class="modal fade" tabindex="-1" GoiCuoc="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="standard-modalLabel">@ViewBag.Title</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="MaGoi" class="form-label">Mã gói cước</label>
+                            <input type="text" ng-model="MaGoi" name="MaGoi" id="MaGoi" class="form-control">
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="ThongTinChinh" class="form-label">Thông tin chính</label>
+                            <input type="text" ng-model="ThongTinChinh" name="ThongTinChinh" id="ThongTinChinh" class="form-control">
+                        </div>
+                    </div>        
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="Data" class="form-label">Dữ liệu gói</label>
+                            <input type="text" ng-model="Data" name="Data" id="Data" class="form-control">
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="GiaGoiCuoc" class="form-label">Giá gói cước</label>
+                            <input type="number" ng-model="GiaGoiCuoc" name="GiaGoiCuoc" id="GiaGoiCuoc" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4>Thông tin gói cước chi tiết</h4>
+                        <div ng-repeat="item in ThongTinGoiCuocs">
+                            <label>Thông tin gói cước chi tiết {{$index + 1}}:</label>
+                            <div class="mb-3">
+                                <label for="MoTa{{$index}}" class="form-label">Mô tả</label>
+                                <input type="text" id="MoTa{{$index}}" class="form-control" ng-model="item.moTa">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="md-3">
+                                <button type="button" class="input-group-text btn-primary" ng-click="addNewThongSo()">Thêm thông số</button>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="md3">
+                                <button type="button" class="input-group-text btn-danger" ng-click="removeThongSo($index)">Xóa thông số</button>
+                            </div>
+                        </div>
+                    </div>
+                   
+                 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" ng-click="CreateUpdate()" data-bs-dismiss="modal">{{btnText}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="~/AngularJS/Admin/GoiCuoc.js"></script>
+}
+

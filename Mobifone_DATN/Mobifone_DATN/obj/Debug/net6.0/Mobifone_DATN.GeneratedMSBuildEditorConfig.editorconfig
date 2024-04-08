@@ -1,0 +1,123 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Mobifone_DATN
+build_property.RootNamespace = Mobifone_DATN
+build_property.ProjectDir = D:\DEV Thuê\MVC\Mobifone_DATN\Mobifone_DATN\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\DEV Thuê\MVC\Mobifone_DATN\Mobifone_DATN
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/DashBoard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaEJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/GioiThieu/GioiThieu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2lvaVRoaWV1XEdpb2lUaGlldS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/GoiCuoc/GoiCuoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR29pQ3VvY1xHb2lDdW9jLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/HoaDon/HoaDon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9hRG9uXEhvYURvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/LienHe/LienHe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGllbkhlXExpZW5IZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/NhanVien/NhanVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmhhblZpZW5cTmhhblZpZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/Role/Role.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/SimSo/SimSo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2ltU29cU2ltU28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/Slide/Slide.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVcU2xpZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/TinTuc/TinTuc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGluVHVjXFRpblR1Yy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Areas/Admin/Views/TuyenDung/TuyenDung.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHV5ZW5EdW5nXFR1eWVuRHVuZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/GioiThieu/GioiThieu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvaVRoaWV1XEdpb2lUaGlldS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/GoiCuoc/GoiCuoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29pQ3VvY1xHb2lDdW9jLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/LienHe/LienHe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGllbkhlXExpZW5IZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/SimSo/SimSo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ltU29cU2ltU28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/ThanhToan/ThanhToan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhbmhUb2FuXFRoYW5oVG9hbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/TinTuc/TinTuc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluVHVjXFRpblR1Yy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/TinTuc/TinTucDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluVHVjXFRpblR1Y0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/TuyenDung/TuyenDung.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHV5ZW5EdW5nXFR1eWVuRHVuZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV Thuê/MVC/Mobifone_DATN/Mobifone_DATN/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-jb5xst2ke5

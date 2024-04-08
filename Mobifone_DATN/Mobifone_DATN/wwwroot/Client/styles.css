@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+.mySlides {
+    display: none;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.mySlides img {
+    width: 100%;
+    height: 380px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 20px;
+  /* Di chuyển nút next vào trong 20px */
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 20px;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev:hover,
+.next:hover {
+  border-radius: 55px;
+  background-color: rgba(104, 103, 103, 0.8);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+form.example input[type="search"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #e5e7eb;
+  float: left;
+  width: 80%;
+  background: #fff;
+  border-radius: 15px 0px 0px 15px;
+}
+
+form.example button {
+  float: left;
+  width: 50px;
+  background: #2196f3;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0px 15px 15px 0px;
+}
+
+form.example input[type="search"]:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.custom-table {
+  background: #f8f8f8;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+
+.custom-table > thead > tr > th {
+  padding: 15px;
+}
+
+.number-row td {
+  border-bottom: none;
+  padding: 20px 0;
+}
+
+.number-cell {
+  text-align: center;
+  font-weight: 700;
+  color: #2196f3;
+}
+
+.data-cell {
+  text-align: center;
+}
+
+.select-button a {
+  padding: 8px;
+  color: white;
+  color: white;
+  background: #2196f3;
+
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}

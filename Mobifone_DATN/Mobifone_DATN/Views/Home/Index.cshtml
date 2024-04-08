@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="HomeCtrl" id="content" role="main" class="content-area">
+    <div class="slideshow-container">
+        <div class="mySlides fade" ng-repeat="item in listSlide">
+            <img src="~/Uploads/Slide/{{item.image}}"
+                 alt="Slide 1">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div style="clear: both;"></div>
+    </div>
+
+    <div id="row-124386404"
+         class="row large-columns-2 medium-columns- small-columns-1 row-full-width has-shadow row-box-shadow-2 row-box-shadow-1-hover row-masonry"
+         data-packery-options='{"itemSelector": ".col", "gutter": 0, "presentageWidth" : true}'>
+        <div class="col post-item" ng-repeat="item in List">
+            <div class="col-inner" >
+                <a href="/tinTucDetail/{{item.id}} style=" height: 210px""
+                   class="plain">
+                    <div class="box box-vertical box-text-bottom box-blog-post has-hover">
+                        <div class="box-image" style="width:46%;">
+                            <div class="image-cover" style="padding-top:56%;">
+                                <img fetchpriority="high" decoding="async" width="276" height="300"
+                                     src="~/Uploads/TinTuc/{{item.image}}"
+                                     class="attachment-medium size-medium wp-post-image" alt=""
+                                     sizes="(max-width: 300px) 100vw, 300px" />
+                            </div>
+                        </div>
+                        <div class="box-text text-center">
+                            <div class="box-text-inner blog-post-inner">
+                                <h5 class="post-title is-large ">
+                                    {{item.tieuDe}}
+                                </h5>
+                                <div class="is-divider"></div>
+                                <p class="from_the_blog_excerpt" ng-bind-html="trustAsHtml(item.noiDung)">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Client/slide.js"></script>
+    <script src="~/AngularJS/Client/Home.js"></script>
+}
+
+
+

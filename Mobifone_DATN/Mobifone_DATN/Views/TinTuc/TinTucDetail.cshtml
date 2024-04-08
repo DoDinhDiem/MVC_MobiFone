@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewData["Title"] = "TinTucDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="TinTucDetailCtrl">
+    <div class="page-title blog-featured-title featured-title no-overflow">
+
+        <div class="page-title-bg fill">
+            <div class="title-bg fill bg-fill bg-top" data-parallax="-2" data-parallax-background
+                 data-parallax-container=".page-title"></div>
+            <div class="title-overlay fill" style="background-color: rgba(0,0,0,.5)"></div>
+        </div>
+
+        <div class="page-title-inner container  flex-row  dark is-large" style="min-height: 300px">
+            <div class="flex-col flex-center text-center">
+                <h6 class="entry-category is-xsmall">
+                </h6>
+                <h1 class="entry-title">{{tinTuc.tieuDe}}</h1>
+                <div class="entry-divider is-divider small"></div>
+                <div class="entry-meta uppercase is-xsmall">
+                    <span class="posted-on">
+                        Đăng vào <a href="javascript:void(0)" rel="bookmark">
+                            <time class="entry-date published" datetime="2023-06-19T03:11:59+00:00">
+                                {{tinTuc.createdAt}}
+                        </a>
+                    </span><span class="byline">
+                        bởi <span class="meta-author vcard">
+                            <a class="url fn n"
+                               href="javascript:void(0)">MobiFone An Giang</a>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="blog-wrapper blog-single page-wrapper">
+
+
+        <div class="row row-large row-divided ">
+
+            <div class="large-9 col">
+                <p ng-bind-html="trustAsHtml(tinTuc.noiDung)"></p>
+            </div>
+            <div class="post-sidebar large-3 col">
+                <div class="is-sticky-column">
+                    <div class="is-sticky-column__inner">
+                        <div id="secondary" class="widget-area " role="complementary">
+                            <aside id="block-3" class="widget widget_block">
+                                <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+                                    <div class="wp-block-group__inner-container">
+                                        <h2 class="wp-block-heading">Bài viết mới</h2>
+                                        <ul class="wp-block-latest-posts__list wp-block-latest-posts">
+                                            <li>
+                                                <a class="wp-block-latest-posts__post-title"
+                                                   href="../minh-cung-don-giap-thin-2024/index.html">
+                                                    Mình cùng
+                                                    đón Giáp Thìn &#8211; 2024!
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="wp-block-latest-posts__post-title"
+                                                   href="../data-nhom-tha-ga-nhan-200gb-qua-da/index.html">
+                                                    DATA
+                                                    NHÓM THẢ GA &#8211; NHẬN 200GB QUÁ ĐÃ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="wp-block-latest-posts__post-title"
+                                                   href="../%f0%9f%95%8achuc-mung-ngay-bao-chi-viet-nam-%f0%9f%95%8a/index.html">
+                                                    🕊CHÚC
+                                                    MỪNG NGÀY BÁO CHÍ VIỆT NAM 🕊
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="wp-block-latest-posts__post-title"
+                                                   href="index.html">
+                                                    Cảnh báo hiện tượng giả mạo tuyển dụng
+                                                    MobiFone để lừa đảo
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="wp-block-latest-posts__post-title"
+                                                   href="../mobifone-invoice-giai-phap-hoa-don-dien-tu-sieu-tien-ich-danh-cho-doanh-nghiepchu-ky-so-la-gi/index.html">
+                                                    MOBIFONE
+                                                    INVOICE &#8211; GIẢI PHÁP HÓA ĐƠN ĐIỆN TỬ SIÊU TIỆN ÍCH DÀNH
+                                                    CHO DOANH NGHIỆPChữ ký số là gì?
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </aside>
+                            <aside id="block-4" class="widget widget_block">
+                                <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+                                    <div class="wp-block-group__inner-container">
+                                        <h2 class="wp-block-heading">Phản hồi gần đây</h2>
+                                        <div class="no-comments wp-block-latest-comments">
+                                            Không có bình luận nào
+                                            để hiển thị.
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="~/AngularJS/Client/TinTucDetail.js"></script>
+}
+

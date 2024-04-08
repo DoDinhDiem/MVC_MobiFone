@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewData["Title"] = "ThanhToan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="ThanhToanCtrl" id="content" role="main" class="content-area">
+    <div class="row">
+        <div class="col medium-8 small-12 large-7">
+            <div style="background: #f8f8f8; height: 88px; width: 100%; border-radius: 15px; display: flex; justify-content: center; align-items: center; text-align: center; margin-bottom: 10px;">
+                <h3> Thông tin đăng ký thuê bao {{selectedSimSo.soThueBao}}</h3>
+            </div>
+            <form>
+                <label for="HoTen">Họ tên</label>
+                <input type="text" ng-model="HoTen" id="HoTen" name="HoTen" placeholder="Họ tên..">
+
+                <label for="SoDienThoai">Số điện thoại</label>
+                <input type="text" ng-model="SoDienThoai" id="SoDienThoai" name="SoDienThoai" placeholder="Số điện thoại.." ng-keypress="checkInput($event)" ng-change="checkLength()" ng-pattern="/^\d{10}$/" ng-focus="showMessage = true" ng-blur="showMessage = false" required>
+                <div ng-show="!isValid && showMessage" class="text-danger">Vui lòng nhập số điện thoại có đúng 10 chữ số.</div>
+
+                <label for="DiaChi">Địa chỉ</label>
+                <input type="text" id="DiaChi" ng-model="DiaChi" name="DiaChi" placeholder="Địa chỉ..">
+
+                <label for="GhiChu">Ghi chú</label>
+                <textarea type="text" id="GhiChu" ng-model="GhiChu" name="GhiChu" placeholder="Ghi chú.."></textarea>
+
+                <input type="submit" ng-click="createHoaDon()" value="Đặt hàng">
+            </form>
+        </div>
+        <div class="col medium-3 small-12 large-5">
+            <div style="background: #f8f8f8; height: 88px; width: 100%; border-radius: 15px; text-align: center; ">
+                <h3 style="padding: 15px 0px;"> Thông tin chi tiết</h3>
+
+                <table class="custom-table">
+                    <tbody>
+                        <tr>
+                            <td style="padding-left: 15px;">
+                                Loại thuê bao
+                            </td>
+                            <td>
+                                {{selectedSimSo.loaiThueBao}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 15px;">
+                                Loại số
+                            </td>
+                            <td>
+                                {{selectedSimSo.loaiSo}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 15px;">
+                                Giá
+                            </td>
+                            <td>
+                                {{selectedSimSo.giaBan.toLocaleString(vi-vn) }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 15px;">
+                                Phương thức thanh toán
+                            </td>
+                            <td>
+                                Thanh toán khi nhận hàng
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/AngularJS/Client/ThanhToan.js"></script>
+}

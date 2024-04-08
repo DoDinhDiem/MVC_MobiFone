@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "TuyenDung";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="TuyenDungCtrl" id="content" role="main" class="content-area">
+    <div class="row" id="row-1563487653" ng-repeat="item in searchResults">
+        <div id="col-192098367" class="col medium-6 small-12 large-6">
+            <div class="col-inner">
+                <h2 class="uppercase">{{item.title}}</h2>
+                <h3 class="thin-font" ng-bind-html="trustAsHtml(item.noiDung)">
+                </h3>
+                <a rel="noopener noreferrer" href="{{item.linkGoogleForm}}" target="_blank"
+                   class="button primary lowercase" style="border-radius:99px;">
+                    <i class="fa-solid fa-envelope"></i> <span>Ứng Tuyển</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="col-1314705622" class="col medium-6 small-12 large-6">
+            <div class="col-inner">
+                <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_492988408">
+                    <div class="img-inner dark">
+                        <img fetchpriority="high" decoding="async" width="730" height="1024"
+                             src="~/Uploads/TuyenDung/{{item.image}}"
+                             class="attachment-large size-large" alt=""
+                             sizes="(max-width: 730px) 100vw, 730px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/AngularJS/Client/TuyenDung.js"></script>
+}

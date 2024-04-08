@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "LienHe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="LienHeCtrl" id="content" role="main" class="content-area">
+    <div class="slider-wrapper relative" id="slider-436758298">
+        <div class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal" >
+            <div id="banner-2055949090" class="banner has-hover" style="padding-top: 30%; background-color: transparent">
+                <div class="banner-inner fill">
+                    <div class="banner-bg fill">
+                        <div class="bg fill bg-fill " style="max-height: 455px;background-image: url(/Uploads/LienHe/{{LienHeList.image}}); background-position: 62% 60%;"></div>
+                    </div>
+                    <div class="banner-layers container">
+                        <div class="fill banner-link"></div>
+                        <div id="text-box-990184213" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text" style="width: 60%;">
+                            <div class="text-box-content text dark">
+                                <div class="text-inner text-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="row-506934874">
+        <div id="col-1563721719" class="col medium-6 small-12 large-6">
+            <div class="col-inner">
+
+                <blockquote>Thông tin liên hệ:</blockquote>
+                <blockquote>
+                    <strong><span style="font-size: 120%;">{{LienHeList.fullname}} </span></strong>
+                </blockquote>
+                <blockquote>
+                    {{LienHeList.diaChi}}
+                </blockquote>
+                <blockquote>Hotline : {{LienHeList.phone}} </blockquote>
+
+            </div>
+        </div>
+        <div id="col-1744859493" class="col medium-6 small-12 large-6">
+            <div class="col-inner" ng-bind-html="trustAsHtml(LienHeList.map)">
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/AngularJS/Client/LienHe.js"></script>
+}
+
